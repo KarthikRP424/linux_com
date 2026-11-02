@@ -1,0 +1,162 @@
+LINUX LEARNING JOURNEY
+========================
+DAY 3 – BASH, ENVIRONMENT VARIABLES AND FILE COMMANDS
+
+1. BASH
+
+Full Form: Bourne Again Shell
+
+Definition:
+Bash is a command-line interpreter (shell) that allows users to communicate with the operating system using commands.
+
+Example:
+echo "Hello Linux"
+
+2. ECHO
+
+Definition:
+echo is a command used to display text or variable values in the terminal.
+
+Example:
+echo "Good Morning Karthik"
+
+Output:
+Good Morning Karthik
+
+3. CREATING OUR OWN ENVIRONMENT VARIABLE
+
+Command:
+export MY_PATH="KARTHIK"
+
+Definition:
+- export creates an environment variable or makes an existing variable available to child processes.
+- MY_PATH is the variable name.
+- KARTHIK is the stored value.
+
+To display the variable:
+echo $MY_PATH
+
+Output:
+KARTHIK
+
+4. PWD – PRINT WORKING DIRECTORY
+
+Command:
+pwd
+
+Definition:
+Displays the absolute path of the current working directory.
+
+Example Output:
+/home/karthik
+
+5. LS COMMAND
+
+A. ls -a
+
+Definition:
+Displays all files and directories, including hidden files.
+
+Note:
+Hidden files usually start with a dot (.).
+
+B. ls -l
+
+Definition:
+Displays files and directories in long-list format.
+
+It provides:
+- File permissions
+- Number of links
+- Owner
+- Group
+- File size
+- Modification date
+- File name
+
+C. ls -la
+
+Definition:
+Displays all files, including hidden files, in long-list format.
+
+6. CAT – CONCATENATE
+
+Definition:
+cat stands for Concatenate.
+
+It is used to:
+- Display file contents.
+- Combine multiple files.
+- Create files and write content using redirection.
+
+A. Create a file:
+
+Command:
+cat > Hello
+
+Type:
+Good morning Karthu
+
+Press Ctrl + D to finish and save.
+
+B. Display file contents:
+
+Command:
+cat Hello
+
+Output:
+Good morning Karthu
+
+Note:
+The > operator creates a file or overwrites its existing contents.
+
+The >> operator appends new content without removing existing content.
+
+7. PWD AND DIRECTORY NAVIGATION
+
+cd = Change Directory
+
+Examples:
+
+cd ~
+Go to the home directory.
+
+cd ..
+Move one directory level up.
+
+cd -
+Return to the previous working directory.
+
+cd ~/Downloads
+Open the Downloads directory.
+
+8. IMPORTANT DAY 3 COMMANDS – QUICK REVISION
+
+echo "Hello"
+export MY_PATH="KARTHIK"
+echo $MY_PATH
+pwd
+ls -a
+ls -l
+ls -la
+cat > Hello
+cat Hello
+cd ~
+cd ..
+cd -
+
+9. DAY 3 KEY LEARNINGS
+
+1. Understood Bash and its role as a shell.
+2. Learned how echo displays text and variables.
+3. Created an environment variable using export.
+4. Learned how pwd identifies the current directory.
+5. Explored hidden files using ls -a.
+6. Explored file information using ls -l.
+7. Created and read files using cat.
+8. Practised directory navigation using cd.
+
+LEARNING PRINCIPLE:
+Understand the command, execute it, observe the output and learn from errors.
+
+My Goal: Become a skilled Linux user and a professional AI Engineer.
