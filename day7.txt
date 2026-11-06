@@ -1,0 +1,272 @@
+# LINUX LEARNING JOURNEY
+# DAY 7 – df AND du COMMANDS
+
+## 1. df COMMAND
+
+`df` stands for Disk Free.
+
+It displays information about filesystem storage.
+
+It helps us understand:
+1. Total disk storage.
+2. Used storage.
+3. Available storage.
+4. Percentage of storage used.
+5. Mounted filesystem locations.
+
+### Basic syntax
+
+```bash
+df
+```
+
+### Example 1: Human-readable format
+
+```bash
+df -h
+```
+
+`-h` means human-readable.
+
+It displays storage in KB, MB, GB and TB.
+
+### Example 2: Display storage in megabytes
+
+```bash
+df -m
+```
+
+`-m` displays sizes in MB.
+
+### Example 3: Display storage in gigabytes
+
+```bash
+df -BG
+```
+
+Displays sizes in GB units.
+
+### Example 4: Display filesystem type
+
+```bash
+df -hT
+```
+
+Displays storage information along with filesystem types.
+
+### Example 5: Check root filesystem storage
+
+```bash
+df -h /
+```
+
+Displays storage information for the filesystem containing the root directory.
+
+## 2. UNDERSTANDING df OUTPUT
+
+Example:
+
+```text
+Filesystem      Size  Used Avail Use% Mounted on
+/dev/sda1       100G   40G   60G  40% /
+```
+
+| Column | Meaning |
+|---|---|
+| Filesystem | Storage device or filesystem |
+| Size | Total filesystem size |
+| Used | Used storage |
+| Avail | Available storage |
+| Use% | Percentage of storage used |
+| Mounted on | Filesystem location |
+
+## 3. man COMMAND
+
+`man` stands for Manual.
+
+It displays documentation for Linux commands.
+
+Syntax:
+
+```bash
+man command_name
+```
+
+Example:
+
+```bash
+man df
+```
+
+It opens the manual page for the df command.
+
+### Important keyboard shortcuts
+
+| Key | Purpose |
+|---|---|
+| Up arrow | Move up |
+| Down arrow | Move down |
+| Space | Next page |
+| b | Previous page |
+| /word | Search for a word |
+| n | Find next occurrence |
+| q | Exit manual |
+
+## 4. du COMMAND
+
+`du` stands for Disk Usage.
+
+It displays how much disk space files and directories are consuming.
+
+### Basic syntax
+
+```bash
+du directory_name
+```
+
+Example:
+
+```bash
+du Downloads
+```
+
+Displays the disk usage of the Downloads directory and its subdirectories.
+
+### Example 1: Human-readable format
+
+```bash
+du -h
+```
+
+Displays sizes in KB, MB and GB.
+
+### Example 2: Display only the total directory size
+
+```bash
+du -sh Downloads
+```
+
+Here:
+
+- `-s` = Summary.
+- `-h` = Human-readable.
+
+Example output:
+
+```text
+2.5G    Downloads
+```
+
+This means the Downloads directory uses approximately 2.5 GB.
+
+### Example 3: Check home directory size
+
+```bash
+du -sh ~
+```
+
+Displays the total disk usage of your home directory.
+
+### Example 4: Check individual folder sizes
+
+```bash
+du -sh ~/*
+```
+
+Displays the size of each non-hidden file and directory inside your home directory.
+
+### Example 5: Sort items by size
+
+```bash
+du -sh ~/* | sort -h
+```
+
+Displays items sorted by size, from smallest to largest.
+
+## 5. UNDERSTANDING PIPE ( | )
+
+A pipe connects two commands.
+
+The output of the first command becomes the input of the second command.
+
+Example:
+
+```bash
+du -sh ~/* | sort -h
+```
+
+Here:
+
+1. `du -sh ~/*` calculates the size of each item.
+2. `|` passes the output to another command.
+3. `sort -h` sorts the sizes in human-readable order.
+
+## 6. DIFFERENCE BETWEEN df AND du
+
+| df | du |
+|---|---|
+| Disk Free | Disk Usage |
+| Displays filesystem storage information | Displays file and directory storage usage |
+| Shows available storage | Shows storage consumed by files and folders |
+| Example: df -h | Example: du -sh ~ |
+
+## 7. PRACTICAL EXERCISE
+
+Run these commands one by one in Ubuntu:
+
+```bash
+df
+df -h
+df -m
+df -BG
+df -hT
+df -i
+man df
+```
+
+Now practise du:
+
+```bash
+du -h
+du -sh ~
+du -sh ~/Downloads
+du -sh ~/Documents
+du -sh ~/*
+du -sh ~/* | sort -h
+```
+
+Note: If Downloads or Documents does not exist, Linux may display an error for that path.
+
+## 8. TODAY'S LEARNING SUMMARY
+
+1. Learned df (Disk Free).
+2. Learned df -h (Human-readable storage).
+3. Learned df -m (Megabytes).
+4. Learned df -BG (Gigabytes).
+5. Learned man (Manual).
+6. Learned du (Disk Usage).
+7. Learned du -sh (Total directory size).
+8. Learned sort -h (Sort human-readable sizes).
+9. Understood the difference between df and du.
+10. Revised the pipe operator.
+
+## 9. IMPORTANT COMMANDS TO REMEMBER
+
+```bash
+df -h
+du -sh ~
+du -sh ~/*
+du -sh ~/* | sort -h
+man df
+man du
+```
+
+## LEARNING PRINCIPLE
+
+df tells us how much filesystem storage is available.
+
+du tells us how much storage files and directories consume.
+
+Understand the output instead of blindly memorizing commands.
+
+LINUX JOURNEY – DAY 7 COMPLETED.
